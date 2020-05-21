@@ -1,0 +1,23 @@
+---
+title: "glassPlot1"
+author: "leighgoodenough"
+date: "21/05/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot: 
+#### Glass RI vs Silicon %, coloured by Glass Type
+
+```{r echo=FALSE}
+suppressPackageStartupMessages(library(plotly))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(mlbench))
+data(Glass)
+plot_ly(data=Glass, x=Glass$RI, y=Glass$Si, mode="markers", type="scatter", color=Glass$Type)
+```
+
+Leigh Goodenough 21/5/20
